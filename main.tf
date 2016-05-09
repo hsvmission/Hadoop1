@@ -9,6 +9,7 @@ resource "aws_instance" "example" {
     instance_type = "t2.micro"
     key_name = "hari"
     subnet_id = "subnet-5018af34"
+    user_data = "${file("userdata.sh")}"
     tags {
            Name = "haripc"
        }
